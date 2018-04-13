@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Patterns.AbstractFactory
 {
-   public abstract class AbstractFactory
+   public interface IShape
    {
-      public abstract IShape GetShape();
+       void Draw();
+       void Fill();
    }
 }

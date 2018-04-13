@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Patterns.AbstractFactory
 {
-   public abstract class AbstractFactory
-   {
-      public abstract IShape GetShape();
-   }
+   //public class ShapeFactory : AbstractFactory
+   // {
+   //     public override IShape GetShape()
+   //     {
+
+   //     }
+   // }
 }

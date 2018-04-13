@@ -42,7 +42,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractFactory\Circle.cs" />
     <Compile Include="AbstractFactory\AbstractFactory.cs" />
+    <Compile Include="AbstractFactory\Oval.cs" />
+    <Compile Include="AbstractFactory\Rectangle.cs" />
+    <Compile Include="AbstractFactory\Shape.cs" />
+    <Compile Include="AbstractFactory\ShapeFactory.cs" />
+    <Compile Include="AbstractFactory\Shapes.cs" />
+    <Compile Include="AbstractFactory\Trapeze.cs" />
+    <Compile Include="AbstractFactory\Triangle.cs" />
     <Compile Include="Adapter.cs" />
     <Compile Include="Decorator.cs" />
     <Compile Include="Observer.cs" />

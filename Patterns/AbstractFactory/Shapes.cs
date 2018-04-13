@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace Patterns.AbstractFactory
 {
-   public abstract class AbstractFactory
-   {
-      public abstract IShape GetShape();
-   }
+    enum Shapes
+    {
+        Rectangle,
+        Circle,
+        Oval,
+        Trapeze,
+        Triangle
+    } 
 }
