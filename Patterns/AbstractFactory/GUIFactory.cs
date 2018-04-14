@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace Patterns.AbstractFactory
 {
-   //public class ShapeFactory : AbstractFactory
-   // {
-   //     public override IShape GetShape()
-   //     {
-
-   //     }
-   // }
+   public interface IGUIFactory
+   {
+       IButton CreateButton();
+       ICheckBox CreateCheckBox();
+   }
 }

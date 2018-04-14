@@ -6,16 +6,11 @@ using System.Threading.Tasks;
 
 namespace Patterns.AbstractFactory
 {
-   public class Trapeze:IShape
+   public class LinuxCheckBox:ICheckBox
     {
         public void Draw()
         {
-            Console.WriteLine("Draw Trapeze");
-        }
-
-        public void Fill()
-        {
-            Console.WriteLine("Fill Trapeze");
+            Console.WriteLine("Linux CheckBox");
         }
     }
 }

@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace Patterns.AbstractFactory
 {
-    enum Shapes
+   public class WinButton:IButton
     {
-        Rectangle,
-        Circle,
-        Oval,
-        Trapeze,
-        Triangle
-    } 
+        public void Draw()
+        {
+            Console.WriteLine("Windows button");
+        }
+    }
 }

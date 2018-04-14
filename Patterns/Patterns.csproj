@@ -42,18 +42,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractFactory\Circle.cs" />
-    <Compile Include="AbstractFactory\AbstractFactory.cs" />
-    <Compile Include="AbstractFactory\Oval.cs" />
-    <Compile Include="AbstractFactory\Rectangle.cs" />
-    <Compile Include="AbstractFactory\Shape.cs" />
-    <Compile Include="AbstractFactory\ShapeFactory.cs" />
-    <Compile Include="AbstractFactory\Shapes.cs" />
-    <Compile Include="AbstractFactory\Trapeze.cs" />
-    <Compile Include="AbstractFactory\Triangle.cs" />
+    <Compile Include="AbstractFactory\Application.cs" />
+    <Compile Include="AbstractFactory\GUIFactory.cs" />
+    <Compile Include="AbstractFactory\IButton.cs" />
+    <Compile Include="AbstractFactory\ICheckBox.cs" />
+    <Compile Include="AbstractFactory\Linux\LinuxButton.cs" />
+    <Compile Include="AbstractFactory\Linux\LinuxCheckBox.cs" />
+    <Compile Include="AbstractFactory\Linux\LinuxFactory.cs" />
+    <Compile Include="AbstractFactory\Windows\WinButton.cs" />
+    <Compile Include="AbstractFactory\Windows\WinCheckBox.cs" />
+    <Compile Include="AbstractFactory\Windows\WinFactory.cs" />
     <Compile Include="Adapter.cs" />
     <Compile Include="Decorator.cs" />
     <Compile Include="Observer.cs" />
+    <Compile Include="PatternsName.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Singleton.cs" />
@@ -61,5 +63,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

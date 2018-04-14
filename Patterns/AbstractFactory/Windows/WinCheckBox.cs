@@ -6,16 +6,11 @@ using System.Threading.Tasks;
 
 namespace Patterns.AbstractFactory
 {
-   public class Oval:IShape
+   public class WinCheckBox:ICheckBox
     {
         public void Draw()
         {
-            Console.WriteLine("Draw Oval");
-        }
-
-        public void Fill()
-        {
-            Console.WriteLine("Fill Oval");
+            Console.WriteLine("Windows CheckBox");
         }
     }
 }

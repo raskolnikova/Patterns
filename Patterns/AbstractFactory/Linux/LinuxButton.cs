@@ -6,16 +6,11 @@ using System.Threading.Tasks;
 
 namespace Patterns.AbstractFactory
 {
-   public class Triangle:IShape
+   public class LinuxButton:IButton
     {
         public void Draw()
         {
-            Console.WriteLine("Draw Triangle");
-        }
-
-        public void Fill()
-        {
-            Console.WriteLine("Fill Triangle");
+            Console.WriteLine("Linux button");
         }
     }
 }
