@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Patterns.AbstractFactory.Windows
 {
-   public class WinFactory:IGUIFactory
+   public class FloatFactory : IGUIFactory
     {
         public IButton CreateButton()
         {
-            return new WinButton();
+            return new FloatButton();
         }
 
         public ICheckBox CreateCheckBox()
         {
-            return new WinCheckBox();
+            return new FloatCheckBox();
         }
     }
 }

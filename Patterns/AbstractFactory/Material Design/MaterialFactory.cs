@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Patterns.AbstractFactory.Linux
 {
-   public class LinuxFactory:IGUIFactory
+   public class MaterialFactory : IGUIFactory
     {
         public IButton CreateButton()
         {
-            return new LinuxButton();
+            return new MaterialButton();
         }
 
         public ICheckBox CreateCheckBox()
         {
-            return new LinuxCheckBox();
+            return new MaterialCheckBox();
         }
     }
 }

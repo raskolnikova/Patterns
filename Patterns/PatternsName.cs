@@ -1,20 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Patterns
 {
-    enum PatternsName
+  public enum PatternsName
     {
         [Description("Одиночка")]
         Singleton = 1,
 
         [Description("Абстрактная фабрика")]
-        AbstractFactory
+        AbstractFactory,
+
+        [Description("Наблюдатель")]
+        Observer
     }
 
     public static class EnumHelper

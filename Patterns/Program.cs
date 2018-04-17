@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Patterns.AbstractFactory;
 using Patterns.AbstractFactory.Linux;
 using Patterns.AbstractFactory.Windows;
+using Patterns.Observer;
 
 namespace Patterns
 {
@@ -18,6 +19,7 @@ namespace Patterns
                 {
                 Console.WriteLine($"1. {EnumHelper.GetEnumDescription(PatternsName.Singleton)} ");
                 Console.WriteLine($"2. {EnumHelper.GetEnumDescription(PatternsName.AbstractFactory)}  ");
+                Console.WriteLine($"3. {EnumHelper.GetEnumDescription(PatternsName.Observer)}  ");
                 Console.WriteLine("Введите номер паттерна:");
 
                 var patternNumber = Console.ReadLine();
@@ -46,11 +48,28 @@ namespace Patterns
                         case PatternsName.AbstractFactory:
                         {
                             Console.WriteLine("Абстракная фабрика используется для генерации элементов интерфейса разных ОС");
-                            Application appWin = new Application(new WinFactory());
+                            Application appWin = new Application(new FloatFactory());
                             appWin.Draw();
 
-                            Application appLinux = new Application(new LinuxFactory());
+                            Application appLinux = new Application(new MaterialFactory());
                             appLinux.Draw();
+                        }
+                        break;
+                        case PatternsName.Observer:
+                        {
+                            Console.WriteLine("Наблюдатель используется для рассылки сообщений подписавшимся сущностям");
+                            LoggingListner loggingListner = new LoggingListner();
+                            FormListner formListner = new FormListner();
+                            Form form = new Form();
+
+                            form.EventManager.Subscribe(EventTypes.Click,loggingListner);
+                            form.EventManager.Subscribe(EventTypes.KeyUp,formListner);
+
+                            form.Click();
+                            form.Hover();
+                            form.KeyUp();
+
+                            form.EventManager.Unsubscribe(EventTypes.KeyUp, formListner);
                         }
                         break;
                         default:  Console.WriteLine("Введен неизвестный номер паттерна");

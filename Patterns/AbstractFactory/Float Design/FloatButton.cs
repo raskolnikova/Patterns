@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Patterns.AbstractFactory
 {
-   public class WinCheckBox:ICheckBox
+   public class FloatButton:IButton
     {
         public void Draw()
         {
-            Console.WriteLine("Windows CheckBox");
+            Console.WriteLine("Float button");
         }
     }
 }

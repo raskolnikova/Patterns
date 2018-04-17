@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Patterns.AbstractFactory
 {
-   public class LinuxButton:IButton
+   public class FloatCheckBox : ICheckBox
     {
         public void Draw()
         {
-            Console.WriteLine("Linux button");
+            Console.WriteLine("Float CheckBox");
         }
     }
 }

@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Patterns
+namespace Patterns.Observer
 {
-    class Observer
+    public enum EventTypes
     {
+        Click,
+        Hover,
+        Focus,
+        KeyUp
     }
 }
