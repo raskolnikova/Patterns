@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Patterns.AbstractFactory;
 using Patterns.AbstractFactory.Linux;
 using Patterns.AbstractFactory.Windows;
+using Patterns.Decorator;
 using Patterns.Observer;
 
 namespace Patterns
@@ -20,6 +21,7 @@ namespace Patterns
                 Console.WriteLine($"1. {EnumHelper.GetEnumDescription(PatternsName.Singleton)} ");
                 Console.WriteLine($"2. {EnumHelper.GetEnumDescription(PatternsName.AbstractFactory)}  ");
                 Console.WriteLine($"3. {EnumHelper.GetEnumDescription(PatternsName.Observer)}  ");
+                Console.WriteLine($"4. {EnumHelper.GetEnumDescription(PatternsName.Decorator)}  ");
                 Console.WriteLine("Введите номер паттерна:");
 
                 var patternNumber = Console.ReadLine();
@@ -72,8 +74,18 @@ namespace Patterns
                             form.EventManager.Unsubscribe(EventTypes.KeyUp, formListner);
                         }
                         break;
-                        default:  Console.WriteLine("Введен неизвестный номер паттерна");
+                        case PatternsName.Decorator:
+                        {
+                            Console.WriteLine("Декоратор используется для симуляции приготовления кофе с разными добавками");
+                            Coffee coffee = new Espresso();
+                            coffee =  new CoffeeWithSugarDecorator(coffee);
+                            coffee = new CoffeeWithMilkDecorator(coffee);
+                            Console.WriteLine($"Название: {coffee.Name}, цена: {coffee.GetCost()}" );
+                        }
+                            break;
+                    default:  Console.WriteLine("Введен неизвестный номер паттерна");
                         break;
+                        
                     }
                 }
             while (Console.ReadKey().Key != ConsoleKey.Escape);

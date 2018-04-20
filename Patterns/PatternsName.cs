@@ -13,7 +13,10 @@ namespace Patterns
         AbstractFactory,
 
         [Description("Наблюдатель")]
-        Observer
+        Observer,
+
+        [Description("Декоратор")]
+        Decorator
     }
 
     public static class EnumHelper
