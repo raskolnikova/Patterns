@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Patterns.AbstractFactory;
 using Patterns.AbstractFactory.Linux;
 using Patterns.AbstractFactory.Windows;
+using Patterns.Adapter;
 using Patterns.Decorator;
 using Patterns.Observer;
 
@@ -22,6 +23,8 @@ namespace Patterns
                 Console.WriteLine($"2. {EnumHelper.GetEnumDescription(PatternsName.AbstractFactory)}  ");
                 Console.WriteLine($"3. {EnumHelper.GetEnumDescription(PatternsName.Observer)}  ");
                 Console.WriteLine($"4. {EnumHelper.GetEnumDescription(PatternsName.Decorator)}  ");
+                Console.WriteLine($"5. {EnumHelper.GetEnumDescription(PatternsName.Adapter)}  ");
+
                 Console.WriteLine("Введите номер паттерна:");
 
                 var patternNumber = Console.ReadLine();
@@ -81,6 +84,15 @@ namespace Patterns
                             coffee =  new CoffeeWithSugarDecorator(coffee);
                             coffee = new CoffeeWithMilkDecorator(coffee);
                             Console.WriteLine($"Название: {coffee.Name}, цена: {coffee.GetCost()}" );
+                        }
+                            break;
+                        case PatternsName.Adapter:
+                        {
+                            Console.WriteLine("Адаптер используется для воспроизведения в плеере данных разных типов ");
+                            AudioPlayer audioPlayer = new AudioPlayer();
+                            audioPlayer.Play("mp3", "Imagine Dragons - Radioactive");
+                            audioPlayer.Play("mp4","Linkin park - Numb");
+                            audioPlayer.Play("oog", "Radiohead - Creep");
                         }
                             break;
                     default:  Console.WriteLine("Введен неизвестный номер паттерна");

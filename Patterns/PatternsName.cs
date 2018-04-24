@@ -16,7 +16,10 @@ namespace Patterns
         Observer,
 
         [Description("Декоратор")]
-        Decorator
+        Decorator,
+
+        [Description("Адаптер")]
+        Adapter
     }
 
     public static class EnumHelper

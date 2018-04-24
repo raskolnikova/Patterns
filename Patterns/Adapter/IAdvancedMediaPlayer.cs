@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Patterns
+namespace Patterns.Adapter
 {
-    class Adapter
+    interface IAdvancedMediaPlayer
     {
+        void PlayMP4(string name);
+        void PlayOOG(string name);
     }
 }

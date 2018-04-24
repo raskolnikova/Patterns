@@ -52,7 +52,11 @@
     <Compile Include="AbstractFactory\Float Design\FloatButton.cs" />
     <Compile Include="AbstractFactory\Float Design\FloatCheckBox.cs" />
     <Compile Include="AbstractFactory\Float Design\FloatFactory.cs" />
-    <Compile Include="Adapter.cs" />
+    <Compile Include="Adapter\AudioPlayer.cs" />
+    <Compile Include="Adapter\IAdvancedMediaPlayer.cs" />
+    <Compile Include="Adapter\IMediaPlayer.cs" />
+    <Compile Include="Adapter\MediaAdapter.cs" />
+    <Compile Include="Adapter\MP4Player.cs" />
     <Compile Include="Decorator\Espresso.cs" />
     <Compile Include="Decorator\CoffeeWithMilkDecorator.cs" />
     <Compile Include="Decorator\Coffee.cs" />
